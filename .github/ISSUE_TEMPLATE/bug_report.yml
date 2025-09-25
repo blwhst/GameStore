@@ -1,1 +1,78 @@
+name: Bug Report (GameStore)
+description: Сообщить об ошибке в приложении GameStore
+title: "[Ошибка]: "
+labels: ["bug"]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Описание ошибки
+      description: Подробно опишите найденную ошибку
+      placeholder: Что произошло? Когда это случилось?
+    validations:
+      required: true
 
+  - type: textarea
+    id: steps
+    attributes:
+      label: Шаги воспроизведения
+      description: Пошагово опишите как воспроизвести ошибку
+      placeholder: 1. Открыть... 2. Нажать... 3. Увидеть ошибку...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Ожидаемый результат
+      description: Что должно было произойти по вашим ожиданиям
+      placeholder: Опишите корректное поведение системы
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Фактический результат
+      description: Что произошло на самом деле
+      placeholder: Опишите фактическое поведение системы
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Приоритет ошибки
+      description: Выберите уровень серьезности проблемы
+      options:
+        - Низкий
+        - Средний
+        - Высокий
+        - Критический
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        Дополнительные материалы
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Скриншоты и материалы
+      description: Приложите скриншоты, логи или другие файлы
+      placeholder: Ссылки на изображения или описание дополнительных материалов
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: agreement
+    attributes:
+      label: Подтверждение
+      description: Подтвердите следующие пункты перед отправкой
+      options:
+        - label: Я проверил что ошибка воспроизводится
+          required: true
+        - label: Я указал все необходимые детали
+          required: true
